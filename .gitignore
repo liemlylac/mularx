@@ -30,6 +30,9 @@ chrome-profiler-events*.json
 !.vscode/extensions.json
 .history/*
 
+# compodoc
+/documentation
+
 # misc
 /.sass-cache
 /connect.lock
@@ -38,8 +41,18 @@ chrome-profiler-events*.json
 npm-debug.log
 yarn-error.log
 testem.log
+tslint-to-eslint-config.log
 /typings
+
+# e2e
+/e2e/src/*.js
+/e2e/src/*.map
+/cypress/screenshots
 
 # System Files
 .DS_Store
 Thumbs.db
+.node-version
+
+# debug
+debug.log

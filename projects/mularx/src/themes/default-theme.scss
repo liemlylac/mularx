@@ -1,0 +1,7 @@
+@use '~@angular/material' as mat;
+
+$mrx-primary: mat.define-palette(mat.$indigo-palette, 800, 300, 900);
+$mrx-accent: mat.define-palette(mat.$light-blue-palette);
+$mrx-warn: mat.define-palette(mat.$pink-palette, 600);
+
+$mrx-theme: mat.define-light-theme($mrx-primary, $mrx-accent, $mrx-warn);
