@@ -17,7 +17,7 @@ exports.config = {
         '--headless',
         '--no-sandbox',
         '--disable-gpu',
-        '--disable-offline-pages'
+        '--disable-offline-features'
       ]
     }
   },

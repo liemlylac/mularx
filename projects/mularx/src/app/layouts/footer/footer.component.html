@@ -1,0 +1,28 @@
+<div class="footer">
+  <div class="row">
+    <div class="col-sm-12 links">
+      <a href="https://www.github.com/liemlylac" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        <span>Github</span>
+      </a>
+      <a href="https://www.twitter.com/liemlylac" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+        <span>Twitter</span>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaLLQimJk1RUdebAdbXSM9g" target="_blank" rel="noopener noreferrer">
+        <fa-icon [icon]="['fab', 'youtube']"></fa-icon>
+        <span>Youtube</span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 signature">
+      &#169; <span class="year">{{ year }}</span> - liemlylac
+      <a [matTooltip]="'footer.changelog' | translate" matTooltipPosition="before"
+         href="https://github.com/liemlylac/mularx">
+        <mat-icon>rocket_launch</mat-icon>
+        {{ version }} <span *ngIf="!isProd">[{{ envName }}]</span>
+      </a>
+    </div>
+  </div>
+</div>

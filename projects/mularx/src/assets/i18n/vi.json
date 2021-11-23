@@ -1,0 +1,22 @@
+{
+  "menu": {
+    "about": "Giới thiệu",
+    "dashboard": "Bảng điều khiển",
+    "login": "Đăng nhập",
+    "profile": "Thông tin tài khoản",
+    "logout": "Đăng xuất"
+  },
+  "title": {
+    "long": "MulaRx",
+    "short": "MRx"
+  },
+  "authen": {
+    "full_name": "Tên đầy đủ",
+    "username": "Tài khoản",
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "remember_me": "Giữ tôi luôn đăng nhập",
+    "forgot_password": "Quên mật khẩu?"
+  }
+}

@@ -1,0 +1,41 @@
+@use '~@angular/material' as mat;
+
+.cdk-overlay-container .notifications {
+  & + * .mat-menu-panel {
+    max-width: 350px;
+    width: 320px;
+  }
+}
+
+@mixin mrx-notifications-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  $hoverColor: mat.get-color-from-palette($background, hover);
+
+  .notifications {
+    .notify {
+      &:hover {
+        background-color: $hoverColor;
+      }
+
+      &.unClicked {
+        background-color: $hoverColor;
+      }
+
+      &.unread {
+        &::after {
+          background-color: mat.get-color-from-palette($accent);
+        }
+      }
+    }
+
+    .notify-icon {
+      color: mat.get-color-from-palette($foreground, text);
+      background-color: mat.get-color-from-palette($accent, lighter);
+    }
+  }
+}
+

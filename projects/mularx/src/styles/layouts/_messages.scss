@@ -1,0 +1,5 @@
+.cdk-overlay-container .messages {
+  & + * .mat-menu-panel {
+    max-width: 300px;
+  }
+}

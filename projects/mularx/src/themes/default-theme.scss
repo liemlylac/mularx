@@ -1,6 +1,20 @@
 @use '~@angular/material' as mat;
 
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+
+$default-pattern: (
+  300: #7986cb,
+  800: #283593,
+  900: #1a237e,
+  contrast: (
+    300: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  )
+);
 $mrx-primary: mat.define-palette(mat.$indigo-palette, 800, 300, 900);
+//$mrx-primary: mat.define-palette($default-pattern, 800, 300, 900);
 $mrx-accent: mat.define-palette(mat.$light-blue-palette);
 $mrx-warn: mat.define-palette(mat.$pink-palette, 600);
 

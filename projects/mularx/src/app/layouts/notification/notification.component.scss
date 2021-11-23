@@ -1,0 +1,112 @@
+.notifications {
+  position: relative;
+  min-height: 300px;
+  max-height: 480px;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-content {
+  max-height: 415px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: -15px;
+}
+
+.notification-title {
+  padding: .5rem;
+}
+
+.loading-layer {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .mat-progress-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.load-more {
+  cursor: pointer;
+  font-size: .9rem;
+  padding: .5rem;
+}
+
+.no-notify {
+  margin: 64px auto;
+}
+
+.notify {
+  margin: 1px 0;
+  cursor: pointer;
+}
+
+.notify.unread {
+  position: relative;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.notify-icon {
+  $iconSize: 48px;
+  text-align: center;
+  margin-left: .3rem;
+  width: $iconSize;
+  line-height: $iconSize;
+  height: $iconSize;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.notify-from {
+  flex: 0 0 auto;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notify-container {
+  flex: 0 0 auto;
+  width: calc(100% - 64px);
+}
+
+.notify-content {
+  $line: 1.25rem;
+  font-size: .9rem;
+  line-height: $line;
+  max-height: 3 * $line;
+  overflow: hidden;
+  margin-right: .3rem;
+}
+
+.notify-datetime {
+  font-size: .8rem;
+}
+
+.mark-as-read {
+  font-size: .9rem;
+  position: absolute;
+  cursor: pointer;
+  right: 8px;
+}
+
+
+

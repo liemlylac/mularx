@@ -1,0 +1,27 @@
+@use '~@angular/material/index' as mat;
+
+@mixin mrx-app-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  mrx-footer {
+    .footer {
+      $footerTextColor: mat.get-color-from-palette($primary, lighter);
+      $footerBgColor: mat.get-color-from-palette($primary, darker);
+
+      color: $footerTextColor;
+      background-color: $footerBgColor;
+
+      .links,
+      .signature {
+        a {
+          color: $footerTextColor;
+          &:hover {
+            color: mat.get-color-from-palette($accent);
+          }
+        }
+      }
+    }
+  }
+}

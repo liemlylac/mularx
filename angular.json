@@ -30,10 +30,11 @@
             "aot": true,
             "assets": [
               "projects/mularx/src/favicon.ico",
-              "projects/mularx/src/assets"
+              "projects/mularx/src/assets",
+              "projects/mularx/src/mock"
             ],
             "styles": [
-              "projects/mularx/src/styles.scss"
+              "projects/mularx/src/styles/main.scss"
             ],
             "scripts": []
           },

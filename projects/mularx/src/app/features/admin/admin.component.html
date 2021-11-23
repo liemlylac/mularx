@@ -1,0 +1,20 @@
+<mrx-header (toolbarClick)="sidenav.toggle()"></mrx-header>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav class="sidenav"
+    [mode]="mode" opened [disableClose]="isDisableClose">
+    <mrx-nav-menu
+      [nodes]="sideNavNodes"
+      [isWide]="isSideBySide"
+      [currentNode]="currentNode"
+    ></mrx-nav-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="wrapper">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <mrx-footer></mrx-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

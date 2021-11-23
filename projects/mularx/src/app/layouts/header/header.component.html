@@ -1,0 +1,79 @@
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <button
+      mat-button
+      class="d-sm-inline d-md-none"
+      (click)="onToolbarClick($event)">
+      <mat-icon>{{toolbarIcon}}</mat-icon>
+    </button>
+    <span routerLink="" class="branding spacer center d-inline d-sm-none">
+      <img [src]="logo" [alt]="logo"/>
+    </span>
+    <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none">
+      <img [src]="logo" [alt]="logo"/>{{ 'title.short' | translate }}
+    </span>
+    <span routerLink="" class="branding spacer d-none d-md-inline">
+      <img [src]="logo" [alt]="logo"/>{{ 'title.long' | translate }}
+    </span>
+    <span class="d-none d-md-inline">
+      <button
+        mat-button class="nav-button"
+        *ngFor="let item of topMenuNavs" [routerLink]="[item.url]"
+        routerLinkActive="active">
+        {{ item.title }}
+      </button>
+      <button
+        mat-button class="nav-button"
+        mat-stroked-button
+        color="accent"
+        [routerLink]="['/admin/dashboard']"
+        *ngIf="(isAuthenticated$ | async)"
+        routerLinkActive="active">
+        {{ 'menu.dashboard' | translate }}
+      </button>
+    </span>
+    <button
+      mat-button
+      mat-stroked-button
+      color="accent"
+      *ngIf="!(isAuthenticated$ | async)"
+      [routerLink]="['/auth/login']">
+      {{ 'menu.login' | translate }}
+    </button>
+    <button
+      mat-icon-button
+      *ngIf="(isAuthenticated$ | async)">
+      <mat-icon
+        matBadge="2"
+        matBadgeColor="warn"
+        matBadgePosition="above after">chat</mat-icon>
+    </button>
+    <mrx-notification
+      *ngIf="(isAuthenticated$ | async)">
+    </mrx-notification>
+    <button
+      mat-icon-button
+      *ngIf="(isAuthenticated$ | async)"
+      [matMenuTriggerFor]="toolbarUserMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <div *ngIf="language$ | async as language" class="d-none d-md-inline">
+      <mat-select [ngModel]="language" (selectionChange)="onLanguageSelect($event)">
+        <mat-option *ngFor="let l of languages" [value]="l">
+          {{ l.toUpperCase() }}
+        </mat-option>
+      </mat-select>
+    </div>
+  </mat-toolbar>
+</div>
+<mat-menu #toolbarUserMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="/admin/profile">
+    <mat-icon>settings</mat-icon>
+    <span>{{ 'menu.profile' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="onLogoutClick()">
+    <mat-icon>power_settings_new</mat-icon>
+    <span>{{ 'menu.logout' | translate }}</span>
+  </button>
+</mat-menu>
+

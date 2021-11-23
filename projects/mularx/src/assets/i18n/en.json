@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "dashboard": "Dashboard",
+    "category": "Category",
+    "product": "Product",
+    "inventory": "Inventory",
+    "sale": "Sale",
+    "customer": "Customer",
+    "cms": "CMS",
+    "calendar": "Calendar",
+    "settings": "Settings",
+    "profile": "Profile",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "title": {
+    "long": "MulaRx",
+    "short": "MRx",
+    "notifications": "Notifications"
+  },
+  "authen": {
+    "full_name": "Full Name",
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?"
+  },
+  "notification": {
+    "title": "Notifications",
+    "mark_as_read": "Mark all as read",
+    "no_notifications_yet": "No notifications yet",
+    "notifications_description": "When you get notifications, they'll show up here",
+    "new_notification": "New notifications",
+    "load_more": "Load more notifications"
+  },
+  "button": {
+    "refresh": "Refresh"
+  },
+  "alert": {
+    "dismiss": "Dismiss"
+  }
+}
