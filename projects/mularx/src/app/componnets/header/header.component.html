@@ -40,14 +40,6 @@
       [routerLink]="['/auth/login']">
       {{ 'menu.login' | translate }}
     </button>
-    <button
-      mat-icon-button
-      *ngIf="(isAuthenticated$ | async)">
-      <mat-icon
-        matBadge="2"
-        matBadgeColor="warn"
-        matBadgePosition="above after">chat</mat-icon>
-    </button>
     <mrx-notification
       *ngIf="(isAuthenticated$ | async)">
     </mrx-notification>

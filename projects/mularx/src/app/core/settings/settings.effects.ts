@@ -22,12 +22,13 @@ export class SettingsEffects {
   }
 
   setTranslateServiceLanguage = createEffect(
-    () =>
-      this.store.pipe(
+    () => {
+      return this.store.pipe(
         select(selectSettingsLanguage),
         distinctUntilChanged(),
         tap((language) => this.translateService.use(language)),
-      ),
+      )
+    },
     { dispatch: false }
   )
 
@@ -35,7 +36,7 @@ export class SettingsEffects {
     () =>
       merge(INIT, this.actions$.pipe(ofType(actionSettingsChangeTheme))).pipe(
         withLatestFrom(this.store.pipe(select(selectSettingsTheme))),
-        tap(([action, effectiveTheme]) => {
+        tap(([, effectiveTheme]) => {
           const classList =
             this.overlayContainer.getContainerElement().classList;
           const toRemove = Array.from(classList).filter((item: string) =>

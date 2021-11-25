@@ -1,7 +1,7 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { merge, of, Subject } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { filter, map, takeUntil } from 'rxjs/operators';
 import { CurrentNode, NavigationNode, NavigationService } from '../../core/navigation';
 
@@ -41,10 +41,8 @@ export class AdminComponent implements OnInit, OnDestroy {
     });
     this.navService.navigationViews = of({
       sidenav: this.navService.getAdminSidenav(),
-    });
-    this.navService.navigationViews = merge(this.navService.navigationViews, of({
       topMenu: this.navService.getMainNav(),
-    }));
+    });
     this.navService.navigationViews.pipe(
       takeUntil(this.destroy$),
       filter((item) => !!item['sidenav']),

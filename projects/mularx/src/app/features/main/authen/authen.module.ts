@@ -1,13 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { LayoutModule } from '../../layouts/layout.module';
+import { SharedModule } from '../../../shared/shared.module';
 import { AuthenRoutingModule } from './authen-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     AuthenRoutingModule,
-    LayoutModule,
+    SharedModule,
   ],
   declarations: [
     LoginComponent,

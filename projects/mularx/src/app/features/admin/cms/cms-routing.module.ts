@@ -5,10 +5,10 @@ import { PageComponent } from './page/page.component';
 const routers: Routes = [
   {
     path: '',
-    redirectTo: 'page',
+    redirectTo: 'pages',
   },
   {
-    path: 'page',
+    path: 'pages',
     component: PageComponent,
   }
 ]

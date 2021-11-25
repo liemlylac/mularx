@@ -38,4 +38,15 @@ export function generateLongContent() {
   return ipsum.generateParagraphs(1);
 }
 
+export function simpleEncode(input: any): string {
+  return btoa(JSON.stringify(input));
+}
+
+export function simpleDecode<T>(input: string): T {
+  try {
+    return JSON.parse(atob(input)) as T;
+  } catch (e) {
+    throw new TypeError('Invalid token format!');
+  }
+}
 

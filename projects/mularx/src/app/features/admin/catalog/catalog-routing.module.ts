@@ -6,20 +6,12 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'category',
+        path: 'categories',
         loadChildren: () => import('./category/category.module').then((m) => m.CategoryModule),
       },
       {
-        path: 'product',
+        path: 'products',
         loadChildren: () => import('./product/product.module').then((m) => m.ProductModule),
-      },
-      {
-        path: 'inventory',
-        loadChildren: () => import('./inventory/inventory.module').then((m) => m.InventoryModule),
-      },
-      {
-        path: 'attribute',
-        loadChildren: () => import('./attribute/attribute.module').then((m) => m.AttributeModule),
       },
     ]
   }

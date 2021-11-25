@@ -24,4 +24,8 @@ export class RootComponent implements OnInit {
   ngOnInit() {
     this.theme$ = this.store.pipe(select(selectSettingsTheme));
   }
+
+  onToolbarClick() {
+
+  }
 }

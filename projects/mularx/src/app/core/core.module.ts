@@ -22,6 +22,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { environment } from '../../environments/environment';
+import { ComponentModule } from '../componnets/component.module';
 import { AuthEffects } from './auth/auth.effects';
 import { AppState, metaReducers, reducers, selectRouterState } from './core.state';
 import { HttpErrorInterceptor } from './http-interceptors/http-error.interceptor';
@@ -69,6 +70,7 @@ export {
     CommonModule,
     HttpClientModule,
     FormsModule,
+    ComponentModule,
 
     // Material
     MatButtonModule,
@@ -108,6 +110,7 @@ export {
   exports: [
     // Angular
     FormsModule,
+    ComponentModule,
 
     // Material
     MatButtonModule,

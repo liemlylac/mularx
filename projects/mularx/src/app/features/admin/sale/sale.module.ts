@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { SaleRoutingModule } from './sale-routing.module';
 import { SaleComponent } from './sale/sale.component';
 
-
-
 @NgModule({
   declarations: [
     SaleComponent

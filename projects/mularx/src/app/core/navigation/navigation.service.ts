@@ -88,102 +88,14 @@ export class NavigationService {
           },
           {
             title: 'Products',
-            children: [
-              {
-                title: 'Manage products',
-                url: '/admin/catalog/products',
-              },
-              {
-                title: 'Add product',
-                url: '/admin/catalog/add',
-              },
-            ]
+            url: '/admin/catalog/products',
           },
-          {
-            title: 'Attribute',
-            children: [
-              {
-                title: 'Manage attributes',
-                url: '/admin/catalog/attributes',
-              },
-              {
-                title: 'Add attribute',
-                url: '/admin/catalog/attributes/add',
-              },
-            ]
-          },
-          {
-            title: 'Inventory',
-            children: [
-              {
-                title: 'Warehouses',
-                url: '/admin/catalog/warehouses',
-              },
-              {
-                title: 'Inventory',
-                url: '/admin/catalog/inventory',
-              },
-            ]
-          }
         ]
       },
       {
         title: 'Sales',
         icon: 'attach_money',
-        children: [
-          {
-            title: 'Orders',
-            children: [
-              {
-                title: 'Manage orders',
-                url: '/admin/sale/orders',
-              },
-              {
-                title: 'Add order',
-                url: '/admin/sale/orders/add',
-              },
-            ]
-          },
-          {
-            title: 'Invoices',
-            children: [
-              {
-                title: 'Manage invoices',
-                url: '/admin/sale/orders',
-              },
-              {
-                title: 'Add invoice',
-                url: '/admin/sale/invoices/add',
-              },
-            ]
-          },
-          {
-            title: 'Shipments',
-            children: [
-              {
-                title: 'Manage shipments',
-                url: '/admin/sale/shipments',
-              },
-              {
-                title: 'Add shipment',
-                url: '/admin/sale/shipments/add',
-              },
-            ]
-          },
-          {
-            title: 'Refund',
-            children: [
-              {
-                title: 'Manage refunds',
-                url: '/admin/sale/refunds',
-              },
-              {
-                title: 'Add refund',
-                url: '/admin/sale/refunds/add',
-              },
-            ]
-          },
-        ]
+        url: '/admin/sales',
       },
       {
         title: 'CMS',
@@ -191,43 +103,8 @@ export class NavigationService {
         children: [
           {
             title: 'Pages',
-            children: [
-              {
-                title: 'Manage pages',
-                url: '/admin/cms/pages',
-              },
-              {
-                title: 'Add page',
-                url: '/admin/cms/pages/add',
-              }
-            ]
+            url: '/admin/cms/pages',
           },
-          {
-            title: 'Blocks',
-            children: [
-              {
-                title: 'Manage blocks',
-                url: '/admin/cms/blocks',
-              },
-              {
-                title: 'Add block',
-                url: '/admin/cms/blocks/add',
-              }
-            ]
-          },
-          {
-            title: 'Widgets',
-            children: [
-              {
-                title: 'Manage widgets',
-                url: '/admin/cms/widgets',
-              },
-              {
-                title: 'Add widget',
-                url: '/admin/cms/widgets/add',
-              }
-            ]
-          }
         ]
       },
       {
@@ -236,30 +113,8 @@ export class NavigationService {
         children: [
           {
             title: 'Customers',
-            children: [
-              {
-                title: 'Manage customers',
-                url: '/admin/customers',
-              },
-              {
-                title: 'Add customer',
-                url: '/admin/customers/add',
-              }
-            ]
+            url: '/admin/customers',
           },
-          {
-            title: 'Customer\'s Groups',
-            children: [
-              {
-                title: 'Manage groups',
-                url: '/admin/customers/groups',
-              },
-              {
-                title: 'Add group',
-                url: '/admin/customers/groups/add',
-              }
-            ]
-          }
         ]
       },
       {
@@ -281,7 +136,7 @@ export class NavigationService {
         icon: 'settings',
         children: [
           {
-            title: 'General settings',
+            title: 'General',
             url: '/admin/settings/general',
           },
           {

@@ -23,11 +23,11 @@ const routes: Routes = [
         loadChildren: () => import('./catalog/catalog.module').then((m) => m.CatalogModule),
       },
       {
-        path: 'sale',
+        path: 'sales',
         loadChildren: () => import('./sale/sale.module').then((m) => m.SaleModule),
       },
       {
-        path: 'customer',
+        path: 'customers',
         loadChildren: () => import('./customer/customer.module').then((m) => m.CustomerModule),
       },
       {
@@ -39,7 +39,7 @@ const routes: Routes = [
         loadChildren: () => import('./calendar/calendar.module').then((m) => m.CalendarModule),
       },
       {
-        path: 'setting',
+        path: 'settings',
         loadChildren: () => import('./setting/setting.module').then((m) => m.SettingModule),
       },
       {

@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   theme$: Observable<string> | undefined;
   topMenuNavs: NavigationNode[];
   isOpenSideNav = true;
-  messages = [];
   notifies: Notification[] = [];
   unreadNotifies: number = 0;
 

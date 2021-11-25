@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { authLogin } from '../../../core/auth/auth.actions';
-import { AppState } from '../../../core/core.state';
+import { authLogin } from '../../../../core/auth/auth.actions';
+import { AppState } from '../../../../core/core.state';
 
 @Component({
   selector: 'mrx-login',
