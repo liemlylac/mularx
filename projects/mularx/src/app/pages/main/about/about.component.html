@@ -1,0 +1,40 @@
+<div class="background">
+  <div class="gradient">
+    <div class="container">
+      <div class="text-center">
+        <h1>{{ 'title.long' | translate }}</h1>
+      </div>
+      <div class="actions">
+        <a
+          mat-raised-button
+          class="actions-main"
+          color="primary"
+          routerLink="../features">
+          {{ 'features.title' | translate }}
+        </a>
+        <a
+          mat-raised-button
+          class="actions-main"
+          color="accent"
+          routerLink="../admin">
+          {{ 'about.admin' | translate }}
+        </a>
+        <a
+          mat-raised-button
+          class="actions-main"
+          color="warn"
+          routerLink="../settings">
+          {{ 'about.change-theme' | translate }}
+        </a>
+        <br />
+      </div>
+      <div class="get-started" >
+        <h2>{{ 'about.get-started' | translate }}</h2>
+        <code>git clone https://github.com/liemlylac/mularx.git new-project</code><br />
+        <code>cd new-project</code><br />
+        <code>npm install</code><br />
+        <code>npm start</code>
+      </div>
+    </div>
+  </div>
+</div>

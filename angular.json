@@ -120,9 +120,12 @@
               "projects/mularx/src/assets"
             ],
             "styles": [
+              "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
               "projects/mularx/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/pace-js/pace.min.js"
+            ]
           },
           "configurations": {
             "test": {

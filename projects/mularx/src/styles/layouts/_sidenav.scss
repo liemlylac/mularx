@@ -45,6 +45,7 @@ mrx-nav-menu {
 .heading-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2px;
 }
 
 .vertical-menu-item {
@@ -78,8 +79,14 @@ mrx-nav-menu {
   }
 
   .mat-icon {
-    margin-right: 10px;
+    margin: 4px 10px 4px 0;
     font-size: 20px;
+    text-align: center;
+    line-height: 24px;
+
+    &.rotating-icon {
+      margin: 4px;
+    }
   }
 
   &.selected {

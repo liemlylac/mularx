@@ -22,12 +22,19 @@
   },
   "authen": {
     "full_name": "Full Name",
+    "email": "Email",
     "username": "Username",
     "password": "Password",
+    "new_password": "New password",
+    "repeat_new_password": "Repeat new password",
     "login": "Login",
     "register": "Register",
+    "send": "Send",
+    "reset_password": "Reset password",
     "remember_me": "Remember me",
-    "forgot_password": "Forgot password?"
+    "forgot_password": "Forgot password?",
+    "agree_privacy": "I have been read and accept the Privacy policy.",
+    "register_newsletter": "Sign up for Newsletter"
   },
   "notification": {
     "title": "Notifications",
@@ -42,5 +49,46 @@
   },
   "alert": {
     "dismiss": "Dismiss"
+  },
+  "features": {
+    "title": "Features",
+    "angular": "Modern powerful framework",
+    "angular-cli": "A command line interface for Angular",
+    "rxjs": "Reactive programming with async collections using Observables",
+    "angular-material": "Material design component library",
+    "material-icons": "Latest icon fonts and CSS for self-hosting material design icons",
+    "ngrx": "One way data flow powered by RxJS Observables",
+    "bootstrap": "Responsive layout from battle tested, world most famous UI library",
+    "fontawesome": "Easy to use vector icons and social logos",
+    "translate": "An internationalization library for Angular",
+    "lazy-loading": "Lazy loading helps keep initial bundle sizes smaller, which in turn helps decrease load times.",
+    "theming": "Customize color and typography styles for components in your application",
+    "eslint": "ESLint is for identifying problematic patterns found in JavaScript and Typescript code",
+    "typescript": "Superior developer experience, code completion, refactoring and less bugs"
+  },
+  "about": {
+    "get-started": "Get started",
+    "admin": "Admin Dashboard",
+    "change-theme": "Change theme"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "free": "Free",
+    "standard": "Standard",
+    "enterprise": "Enterprise",
+    "source": "Source code",
+    "docs": "Documentation",
+    "template": "Layout Template",
+    "support": "Support 24/7",
+    "update": "Update to new version",
+    "customize-ui": "Customize UI component",
+    "more-features": "More features",
+    "plan-free": "All features of Free plan",
+    "plan-standard": "All features of Standard plan",
+    "monthly": "/month",
+    "annual": "/year",
+    "get_started": "Get started",
+    "choose_plan": "Choose plan",
+    "contact": "Contact"
   }
 }

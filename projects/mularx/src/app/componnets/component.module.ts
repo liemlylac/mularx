@@ -4,9 +4,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavItemIconPipe } from './nav-item/nav-item-icon.pipe';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { NavItemComponent } from './nav-item/nav-item.component';
+import { SidebarItemIconPipe } from './sidebar/item/sidebar-item-icon.pipe';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarItemComponent } from './sidebar/item/sidebar-item.component';
 import { NotifyAvatarPipe, NotifyUnread } from './notification/notifications.pipe';
 import { NotificationComponent } from './notification/notification.component';
 
@@ -19,9 +19,9 @@ import { NotificationComponent } from './notification/notification.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavMenuComponent,
-    NavItemComponent,
-    NavItemIconPipe,
+    SidebarComponent,
+    SidebarItemComponent,
+    SidebarItemIconPipe,
     NotificationComponent,
     NotifyAvatarPipe,
     NotifyUnread,
@@ -30,8 +30,8 @@ import { NotificationComponent } from './notification/notification.component';
     SharedModule,
     HeaderComponent,
     FooterComponent,
-    NavMenuComponent,
-    NavItemIconPipe,
+    SidebarComponent,
+    SidebarItemIconPipe,
     NotificationComponent,
     NotifyAvatarPipe,
     NotifyUnread,

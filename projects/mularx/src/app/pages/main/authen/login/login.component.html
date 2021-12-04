@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <h2>{{ 'title.long' | translate }}</h2>
+    </div>
+  </div>
+  <form [formGroup]="form">
+    <div class="row justify-content-center">
+      <div class="col-xl-4 col-lg-5 col-md-6">
+        <mat-card>
+          <div class="row text-center">
+            <div class="col">
+              <h2 class="mt-2">{{ 'authen.login' | translate }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" appearance="outline">
+              <mat-label>{{ 'authen.username' | translate }}</mat-label>
+              <input matInput formControlName="username"/>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" appearance="outline">
+              <mat-label>{{ 'authen.password' | translate }}</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                formControlName="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <div class="col mt-1 pb-4">
+              <mat-checkbox formControlName="rememberMe">
+                <mat-label>{{ 'authen.remember_me' | translate }}</mat-label>
+              </mat-checkbox>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col  mt-1 pb-4">
+              <button
+                class="w-100"
+                mat-raised-button
+                color="primary"
+                (click)="onLoginClick()">
+                {{ 'authen.login' | translate }}
+              </button>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <a routerLink="/auth/register">{{ 'authen.register' | translate }}</a>
+            </div>
+            <div class="col-6">
+              <a routerLink="/auth/forgot-password">{{ 'authen.forgot_password' | translate }}</a>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>

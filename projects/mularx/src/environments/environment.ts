@@ -13,12 +13,16 @@ export const environment = {
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies["@angular/core"],
+    angularCli: packageJson.devDependencies["@angular/cli"],
     material: packageJson.dependencies["@angular/material"],
     materialIcons: packageJson.dependencies["material-icons"],
     ngrx: packageJson.dependencies["@ngrx/store"],
     bootstrap: packageJson.dependencies.bootstrap,
+    fontAwesome: packageJson.dependencies["@fortawesome/fontawesome-free"],
     rxjs: packageJson.dependencies.rxjs,
     translate: packageJson.dependencies["@ngx-translate/core"],
+    eslint: packageJson.devDependencies.eslint,
+    typescript: packageJson.devDependencies.typescript,
   },
   gaId: ''
 };

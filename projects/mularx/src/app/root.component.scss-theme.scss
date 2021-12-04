@@ -5,6 +5,15 @@
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
+  mrx-header {
+    .toolbar {
+      button.active {
+        color: mat.get-color-from-palette($accent, default-contrast);
+        background-color: mat.get-color-from-palette($accent);
+      }
+    }
+  }
+
   mrx-footer {
     .footer {
       $footerTextColor: mat.get-color-from-palette($primary, lighter);

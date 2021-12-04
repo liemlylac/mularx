@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="main-heading">{{ 'pricing.title' | translate }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let plan of plans" class="col-md-4 mb-3">
+      <mat-card>
+        <mat-card-title>
+          <h2 class="text-center">
+            {{ plan.name | translate }}
+          </h2>
+        </mat-card-title>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-list>
+            <mat-list-item *ngFor="let feature of plan.features">
+              <mat-icon>checked</mat-icon>
+              {{ 'pricing.' + feature | translate }}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div
+              *ngIf="plan.priceLabel"
+              class="price text-center">
+              {{ plan.priceLabel | translate }}
+            </div>
+            <div
+              *ngIf="plan.price"
+              class="row">
+              <div class="price col-6 text-center">
+                {{ plan.price.monthly | currency: '$' }}
+                {{ 'pricing.monthly' | translate}}
+              </div>
+              <div class="price col-6 text-center">
+                {{ plan.price.annual | currency: '$'}}
+                {{ 'pricing.annual' | translate}}
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+          </mat-list>
+        </mat-card-content>
+        <mat-card-actions class="text-center mb-3">
+          <button
+            mat-raised-button
+            [color]="plan.action.color"
+          >{{ plan.action.label | translate }}</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

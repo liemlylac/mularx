@@ -19,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -61,6 +62,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatSidenavModule,
     MatSlideToggleModule,
     MatSnackBarModule,
+    MatTableModule,
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
@@ -89,6 +91,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatSidenavModule,
     MatSlideToggleModule,
     MatSnackBarModule,
+    MatTableModule,
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,

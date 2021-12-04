@@ -40,7 +40,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private store: Store<AppState>,
     private navigationService: NavigationService,
   ) {
-    console.log('Header created');
   }
 
   get toolbarIcon() {

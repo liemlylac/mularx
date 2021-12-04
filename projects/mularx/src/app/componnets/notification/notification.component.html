@@ -20,7 +20,7 @@
     </div>
     <mat-divider></mat-divider>
     <div class="loading-layer" *ngIf="loading">
-      <mat-spinner></mat-spinner>
+      <mat-spinner diameter="32"></mat-spinner>
     </div>
     <div #scrollable class="notification-content">
       <div class="no-notify text-center" *ngIf="(!loading && hasNoItems)">

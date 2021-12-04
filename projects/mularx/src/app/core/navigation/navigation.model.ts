@@ -5,7 +5,6 @@ export interface NavigationNode {
   icon?: string;
   url?: string;
   tooltip?: string;
-  hidden?: boolean;
   children?: NavigationNode[]
 }
 

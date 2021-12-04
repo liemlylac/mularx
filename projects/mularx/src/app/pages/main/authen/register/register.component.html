@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <h2>{{ 'title.long' | translate }}</h2>
+    </div>
+  </div>
+  <form [formGroup]="form">
+    <div class="row justify-content-center">
+      <div class="col-xl-4 col-lg-5 col-md-6">
+        <mat-card>
+          <div class="row text-center">
+            <div class="col">
+              <h2 class="mt-2">{{ 'authen.register' | translate }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" appearance="outline">
+              <mat-label>{{ 'authen.full_name' | translate }}</mat-label>
+              <input matInput formControlName="fullName"/>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" appearance="outline">
+              <mat-label>{{ 'authen.username' | translate }}</mat-label>
+              <input matInput formControlName="username"/>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" appearance="outline">
+              <mat-label>{{ 'authen.password' | translate }}</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                formControlName="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <div class="col mt-1 pb-4">
+              <mat-checkbox formControlName="agree">
+                <mat-label>{{ 'authen.register_newsletter' | translate }}</mat-label>
+              </mat-checkbox>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mt-1 pb-4">
+              <mat-checkbox formControlName="agree">
+                <mat-label>{{ 'authen.agree_privacy' | translate }}</mat-label>
+              </mat-checkbox>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col  mt-1 pb-4">
+              <button
+                class="w-100"
+                mat-raised-button
+                color="primary"
+                (click)="onRegisterClick()">
+                {{ 'authen.register' | translate }}
+              </button>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-6">
+              <a routerLink="/auth/login">{{ 'authen.login' | translate }}</a>
+            </div>
+            <div class="col-6">
+              <a routerLink="/auth/forgot-password">{{ 'authen.forgot_password' | translate }}</a>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>

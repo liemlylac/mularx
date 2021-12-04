@@ -16,6 +16,9 @@
   $hoverColor: mat.get-color-from-palette($background, hover);
 
   .notifications {
+    .loading-layer {
+      background-color: $hoverColor;
+    }
     .notify {
       &:hover {
         background-color: $hoverColor;
